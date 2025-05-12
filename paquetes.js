@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+const express = require('express');
+const router = express.Router();
 
-const paquetesSchema = new mongoose.Schema({
-    nombre: String,
-    descripcion: String,
-    precio: Number
+// Ruta de prueba
+router.get('/', (req, res) => {
+  res.send('Ruta de paquetes funcionando correctamente');
 });
 
-module.exports = mongoose.model('Paquetes', paquetesSchema);
+module.exports = router;
