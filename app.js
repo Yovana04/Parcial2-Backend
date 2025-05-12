@@ -3,16 +3,11 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 
-const reservasRoutes = require('./routes/reservas');
-const contactosRoutes = require('./routes/contactos');
 
 const app = express();
 
 app.use(express.json());
 
-
-app.use('/api/reservas', reservasRoutes);
-app.use('/api/contactos', contactosRoutes);
 
 console.log('Mongo URI:', process.env.MONGO_URI);
 
