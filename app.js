@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 
-const productosRoutes = require('./routes/productos');
 const paquetesRoutes = require('./routes/paquetes');
 const reservasRoutes = require('./routes/reservas');
 const contactosRoutes = require('./routes/contactos');
@@ -12,8 +11,7 @@ const app = express();
 
 app.use(express.json());
 
-// Rutas
-app.use('/api/productos', productosRoutes);
+
 app.use('/api/paquetes', paquetesRoutes);
 app.use('/api/reservas', reservasRoutes);
 app.use('/api/contactos', contactosRoutes);
